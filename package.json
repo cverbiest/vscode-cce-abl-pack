@@ -1,7 +1,7 @@
 {
   "name": "abl-developer-pack",
-  "displayName": "ABL Developer pack",
-  "description": "ABL Developer VsCode extension collection",
+  "displayName": "CCE ABL Developer pack",
+  "description": "Opinionated CCE collection of VsCode extensions for ABL developers. Maybe useful outside CCE, will change according to CCE needs",
   "publisher": "cverbiest",
   "license": "MIT",
   "repository": {
