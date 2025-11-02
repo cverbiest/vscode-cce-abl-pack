@@ -1,7 +1,7 @@
 # CCE OpenEdge ABL developer pack
 
 This is an opinionated combination of
-* extensions,
+* extensions
 * keybindings
 * and default settings
 for OpenEdge ABL developers at CCE.
@@ -10,7 +10,7 @@ This extension pack may be useful outside of CCE, but will change according to C
 
 Feel free to [fork](https://github.com/cverbiest/vscode-cce-abl-pack) and adapt to your own needs.
 
-My other collections without configuration remains available
+My other collections without configuration remain available
 * [abl-developer-pack](https://marketplace.visualstudio.com/items?itemName=cverbiest.abl-developer-pack)
 *  [cverbiest-full-pack](https://marketplace.visualstudio.com/items?itemName=cverbiest.cverbiest-full-pack)
 
@@ -24,13 +24,15 @@ My other collections without configuration remains available
 | shift+f2            | Compile editor content  | abl.compileBuffer                 |
 | ctrl+alt+t          | Open runtask dialog     | workbench.action.tasks.runTask    |
 | ctrl+alt+x          | Show active file in VsCode explorer, combine with [explorer.autoReveal](vscode://settings/explorer.autoReveal) false | workbench.files.action.showActiveFileInExplorer |
-| ctrl+numpad_decimal | Navigate to next marked | editor.action.marker.nextInFiles" |
+| ctrl+numpad_decimal | Navigate to next error/warning marker | editor.action.marker.nextInFiles |
 
 ## Default Settings
 
-* Fira Font with ligatures
-* Windows Openedge in c:\Progress\oexxx
+These settings can still be changed locally, only the default values are set by the plugin
 
+* [Fira Font](https://github.com/tonsky/FiraCode) with ligatures
+* Windows Openedge in oe128 in c:\Progress\oe128, oe122 in c:\Progress\oe122
+* `explorer.autoReveal` set to false, use ctrl+alt+x to show active file in explorer
 
 ## OpenEdge related Extensions by publisher
 
@@ -43,7 +45,7 @@ My other collections without configuration remains available
 
 * [ProPeek](https://marketplace.visualstudio.com/items?itemName=BalticAmadeus.pro-peek) : consult OpenEdge profiler data
 * [ProBro](https://marketplace.visualstudio.com/items?itemName=BalticAmadeus.pro-bro) : Database viewer
-* [AblFormatter](https://marketplace.visualstudio.com/items?itemName=BalticAmadeus.openedge-abl-formatter) : Database viewer
+* [AblFormatter](https://marketplace.visualstudio.com/items?itemName=BalticAmadeus.openedge-abl-formatter) : Abl code formatter
 
 ### Consultingwerk
 
@@ -55,39 +57,59 @@ My other collections without configuration remains available
 
 ## Non Openedge related extensions
 
-####  "benrogerswpg.websearchengine",
+### Websearch selected text `benrogerswpg.websearchengine`
+Search selected text using preconfigured search engines, included are:
+* OpenEdge Knowledgebase
+* ABL doc search
+* Search All ABL reference
+* ABL 12.8 reference
+* ABL 12.2 reference
+* Google Progress site
+* Google
+* Stack Overflow
+* Wikipedia
+* GitHub
 
-###  "bhughes339.replacerules",
+### File templates `rioj7.vscode-file-templates`
+Define your own file templates. See my [vscode-abl-sample-workspace](https://github.com/cverbiest/vscode-abl-sample-workspace/tree/main/.vscode/templates) for some ABL templates.
 
-###  "eamodio.gitlens",
+### Replace rules `bhughes339.replacerules`
+Create sets of re-usable replace rules.
 
-###  "esbenp.prettier-vscode",
+### Git lens `eamodio.gitlens`
+Display inline git information.
 
-###  "jtr.vscode-position",
+### Prettier code formatter `esbenp.prettier-vscode`
+An opinionated code formatter for a large set of languages.
 
-###  "rioj7.vscode-file-templates",
+### Jump to absolute file position `jtr.vscode-position`
+Useful if you get an error at character position ... .
 
-###  "hkato193.jp-katohirohito-extension-vscode-quickopen-with-selection",
+### QuickOpen with selected text `kato19.jp-katohirohito-extension-vscode-quickopen-with-selection`
+Puts the selected text in the QuickOpen dialog.
 
-###  "usernamehw.errorlens"
-
+### Error lens
+Display inline errors using `usernamehw.errorlens`
 
 **Enjoy!**
 
 ## History
 
-### Version 1.2.0
+### Version 0.0.5
+* Cleanup readme file
 
-* Add Baltic Amadeus  ABL Formatter
+### Version 0.0.4
 
-### Version 1.1.1
+* Prepare for publishing
 
-* Revert back to strict ABL
+### Version 0.0.3
 
-### Version 1.1.0
+* Add keybindings and connfiguration defaults
 
-* Open up to non OpenEdge extensions
+### Version 0.0.2
 
-### Version 1.0.0
+* Add extra non OpenEdge extensions
 
-* Add Consultingwerk PASOE Manager Extension
+### Version 0.0.1
+
+* Started as clone of abl-developer-pack

@@ -8,7 +8,7 @@
     "url": "https://github.com/cverbiest/vscode-cce-abl-pack"
   },
   "icon": "vscode-openedge-abl-pack.png",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "engines": {
     "vscode": "^1.92.0"
   },
@@ -56,7 +56,6 @@
         "editor.semanticHighlighting.enabled": false,
         "editor.wordSeparators": "`~!@#$%^&()=+[{}]\\|;:'\",.<>/?"
       },
-      "sonarlint-abl.focusOnNewCode": true,
       "editor.fontFamily": "Fira Code",
       "editor.fontLigatures": true,
       "editor.formatOnPaste": true,
@@ -80,7 +79,6 @@
         "VSCODE_WS": "${workspaceFolder}"
       },
       "templates.dateTimeFormat": {
-        "locale": "nl-BE",
         "options": {
           "year": "numeric",
           "month": "2-digit",
