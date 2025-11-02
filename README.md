@@ -1,13 +1,36 @@
-# OpenEdge ABL developer pack
+# CCE OpenEdge ABL developer pack
 
-This is a collection of ABL specific extensions.
+This is an opinionated combination of
+* extensions,
+* keybindings
+* and default settings
+for OpenEdge ABL developers at CCE.
 
-For my non-ABL plugin collection see [cverbiest-full-pack](https://marketplace.visualstudio.com/items?itemName=cverbiest.cverbiest-full-pack)
+This extension pack may be useful outside of CCE, but will change according to CCE needs.
 
-Building an extension pack is easy.
+Feel free to [fork](https://github.com/cverbiest/vscode-cce-abl-pack) and adapt to your own needs.
 
-Real credit should go to the people that do the hard work to make it possible to develop OpenEdge ABL in vscode.
-For more information visit the pages of the extensions contained in the pack.
+My other collections without configuration remains available
+* [abl-developer-pack](https://marketplace.visualstudio.com/items?itemName=cverbiest.abl-developer-pack)
+*  [cverbiest-full-pack](https://marketplace.visualstudio.com/items?itemName=cverbiest.cverbiest-full-pack)
+
+# What's inside
+
+## Keybindings
+
+| Key                 | Description             | Action                            |
+| ------------------- | ----------------------- | --------------------------------- |
+| ctrl+alt+c          | Compile editor content  | abl.compileBuffer                 |
+| shift+f2            | Compile editor content  | abl.compileBuffer                 |
+| ctrl+alt+t          | Open runtask dialog     | workbench.action.tasks.runTask    |
+| ctrl+alt+x          | Show active file in VsCode explorer, combine with [explorer.autoReveal](vscode://settings/explorer.autoReveal) false | workbench.files.action.showActiveFileInExplorer |
+| ctrl+numpad_decimal | Navigate to next marked | editor.action.marker.nextInFiles" |
+
+## Default Settings
+
+* Fira Font with ligatures
+* Windows Openedge in c:\Progress\oexxx
+
 
 ## OpenEdge related Extensions by publisher
 
@@ -29,6 +52,25 @@ For more information visit the pages of the extensions contained in the pack.
 ### Kenneth Herring
 
 * [AblUnit](https://marketplace.visualstudio.com/items?itemName=kherring.ablunit-test-runner) : Testing
+
+## Non Openedge related extensions
+
+####  "benrogerswpg.websearchengine",
+
+###  "bhughes339.replacerules",
+
+###  "eamodio.gitlens",
+
+###  "esbenp.prettier-vscode",
+
+###  "jtr.vscode-position",
+
+###  "rioj7.vscode-file-templates",
+
+###  "hkato193.jp-katohirohito-extension-vscode-quickopen-with-selection",
+
+###  "usernamehw.errorlens"
+
 
 **Enjoy!**
 

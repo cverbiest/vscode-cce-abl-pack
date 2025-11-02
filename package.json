@@ -1,14 +1,14 @@
 {
-  "name": "abl-developer-pack",
+  "name": "cce-abl-developer-pack",
   "displayName": "CCE ABL Developer pack",
-  "description": "Opinionated CCE collection of VsCode extensions for ABL developers. Maybe useful outside CCE, will change according to CCE needs",
+  "description": "Opinionated collection of VsCode extensions for CCE ABL developers. Maybe useful outside of CCE, but will change according to CCE needs",
   "publisher": "cverbiest",
   "license": "MIT",
   "repository": {
-    "url": "https://github.com/cverbiest/vscode-openedge-abl-pack"
+    "url": "https://github.com/cverbiest/vscode-cce-abl-pack"
   },
   "icon": "vscode-openedge-abl-pack.png",
-  "version": "1.2.0",
+  "version": "0.0.4",
   "engines": {
     "vscode": "^1.92.0"
   },
@@ -24,10 +24,122 @@
   "extensionPack": [
     "riversidesoftware.openedge-abl-lsp",
     "riversidesoftware.sonarlint-abl",
-    "balticamadeus.pro-bro",
     "balticamadeus.pro-peek",
+    "balticamadeus.pro-bro",
     "balticamadeus.openedge-abl-formatter",
     "consultingwerkapplicationmodernizationsolutionsltd.oemanager",
-    "kherring.ablunit-test-runner"
-  ]
+    "kherring.ablunit-test-runner",
+    "benrogerswpg.websearchengine",
+    "eamodio.gitlens",
+    "esbenp.prettier-vscode",
+    "jtr.vscode-position",
+    "rioj7.vscode-file-templates",
+    "hkato193.jp-katohirohito-extension-vscode-quickopen-with-selection",
+    "usernamehw.errorlens",
+    "vscode-icons-team.vscode-icons"
+  ],
+  "contributes": {
+    "configurationDefaults": {
+      "abl.configuration.runtimes": [
+        {
+          "name": "12.2",
+          "path": "c:\\progress\\oe122",
+          "default": false
+        },
+        {
+          "name": "12.8",
+          "path": "c:\\progress\\oe128",
+          "default": true
+        }
+      ],
+      "[abl]": {
+        "editor.semanticHighlighting.enabled": false,
+        "editor.wordSeparators": "`~!@#$%^&()=+[{}]\\|;:'\",.<>/?"
+      },
+      "sonarlint-abl.focusOnNewCode": true,
+      "editor.fontFamily": "Fira Code",
+      "editor.fontLigatures": true,
+      "editor.formatOnPaste": true,
+      "explorer.autoReveal": false,
+      "files.trimTrailingWhitespace": true,
+      "files.exclude": {
+        "*.r": true
+      },
+      "search.showLineNumbers": true,
+      "search.useIgnoreFiles": false,
+      "search.exclude": {
+        "**/*.r": true,
+        "**/*.resx": true,
+        "**/*.xref": true
+      },
+      "terminal.integrated.copyOnSelection": true,
+      "terminal.integrated.env.linux": {
+        "VSCODE_WS": "${workspaceFolder}"
+      },
+      "terminal.integrated.env.windows": {
+        "VSCODE_WS": "${workspaceFolder}"
+      },
+      "templates.dateTimeFormat": {
+        "locale": "nl-BE",
+        "options": {
+          "year": "numeric",
+          "month": "2-digit",
+          "day": "2-digit",
+          "hour12": false,
+          "hour": "2-digit",
+          "minute": "2-digit",
+          "second": "2-digit"
+        },
+        "template": "${year}-${month}-${day} ${hour}:${minute}:${second}"
+      },
+      "outline.collapseItems": "alwaysCollapse",
+      "[jsonc]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+      },
+      "webSearch.addToSelectedText": false,
+      "webSearch.searchEngines": {
+        "OpenEdge Knowledgebase": "https://community.progress.com/s/global-search/%40uri#t=KnowledgeBase&sort=relevancy&f:@commonproductgroup=[OpenEdge]&q=%s",
+        "ABL doc search": "https://community.progress.com/s/global-search/%40uri?t=Documentation&sort=relevancy&f%3A%40commonproductgroup=%5BOpenEdge%5D#t=All&sort=relevancy&q=%s",
+        "Search All ABL reference": "https://community.progress.com/s/global-search/%40uri?t=All&sort=relevancy&f%3A%40commonproductgroup=%5BOpenEdge%5D#t=All&sort=relevancy&q=%s",
+        "ABL 12.8 reference": "https://docs.progress.com/search?bundle=abl-reference&labelkey=product_openedge_128&q=%s",
+        "ABL 12.2 reference": "https://docs.progress.com/search?bundle=abl-reference&labelkey=product_openedge_122&q=%s",
+        "Google Progress site": "https://www.google.com/search?q=site:progress.com%20%s",
+        "Google": "https://www.google.com/search?q=%s",
+        "Stack Overflow": "https://stackoverflow.com/search?q=%s",
+        "Wikipedia": "https://en.wikipedia.org/wiki/Special:Search?search=%s",
+        "GitHub": "https://github.com/search?q=%s"
+      },
+      "webSearch.useDefaultSearchEnginesList": false
+    },
+    "keybindings": [
+      {
+        "key": "ctrl+alt+c",
+        "command": "abl.compileBuffer",
+        "when": "resourceLangId == 'abl'"
+      },
+      {
+        "key": "shift+f2",
+        "command": "abl.compileBuffer",
+        "when": "resourceLangId == 'abl'"
+      },
+      {
+        "key": "ctrl+alt+t",
+        "command": "workbench.action.tasks.runTask"
+      },
+      {
+        "key": "ctrl+alt+x",
+        "command": "workbench.files.action.showActiveFileInExplorer"
+      },
+      {
+        "key": "ctrl+numpad_decimal",
+        "command": "editor.action.marker.nextInFiles",
+        "when": "editorFocus"
+      },
+      {
+        "key": "f8",
+        "command": "-editor.action.marker.nextInFiles",
+        "when": "editorFocus"
+      }
+    ]
+  }
 }
